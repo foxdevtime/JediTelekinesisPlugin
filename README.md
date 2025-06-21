@@ -6,7 +6,7 @@
 </p>
 
 <a id="english-documentation"></a>
-# JediTelekinesis Spigot Plugin
+# JediTelekinesis Plugin
 
 **Feel the Force!** This plugin for Spigot/Paper adds true Jedi abilities to Minecraft, inspired by the Star Wars universe. Control entities from a distance, perform powerful dashes, and push enemies away using the Force!
 
@@ -110,7 +110,7 @@ Pull requests are welcome!
 **May the Force be with you! ;)**
 
 <a id="russian-documentation"></a>
-# JediTelekinesis Spigot Plugin
+# JediTelekinesis Plugin
 
 **Почувствуй Силу!** Этот плагин для Spigot/Paper добавляет в Minecraft способности настоящего джедая, вдохновленные вселенной Звездных Войн. Управляйте сущностями на расстоянии, совершайте мощные рывки и отталкивайте врагов с помощью Силы!
 
