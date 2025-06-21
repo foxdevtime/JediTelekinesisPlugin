@@ -1,3 +1,5 @@
+[![Final video of fixing issues in your code in VS Code](https://img.youtube.com/vi/30r3LJFjoHE/maxresdefault.jpg)](https://youtu.be/30r3LJFjoHE)
+
 <p align="center">
   <a href="#english-documentation"><strong>English</strong></a> | 
   <a href="#russian-documentation"><strong>Русский</strong></a>
