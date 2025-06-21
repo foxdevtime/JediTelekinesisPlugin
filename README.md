@@ -204,3 +204,5 @@ Pull requests are welcome!
 ---
 
 **Да пребудет с вами Сила! ;)**
+
+"I love BlackMinecraft! <3" [Black.Fox](https://black-minecraft.com/members/black-fox.25899/)
