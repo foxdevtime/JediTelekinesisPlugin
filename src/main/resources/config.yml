@@ -1,0 +1,100 @@
+# JediTelekinesis Plugin Configuration
+
+#------------------------------------------------------------------------------------#
+# General Settings
+#------------------------------------------------------------------------------------#
+language: "en" # which lang file to use, like en or ru
+
+general:
+  min-distance-to-player-eyes: 1.2 # stops what you're holding from getting too up in your face
+
+#------------------------------------------------------------------------------------#
+# Force Crystal Settings
+#------------------------------------------------------------------------------------#
+force-crystal:
+  material: "NETHER_STAR" # what the Force Crystal item is, use official Material names
+  # crystal's display name and lore are in the lang files
+
+#------------------------------------------------------------------------------------#
+# Telekinesis Ability
+#------------------------------------------------------------------------------------#
+telekinesis:
+  pull-distance: 3.5      # how far out the held thing floats
+  max-grab-range: 20.0    # how far you can grab stuff from
+  throw-strength: 1.7     # how hard you yeet things
+  max-player-hold-duration-seconds: 10 # how long you can hold another player before they're automatically let go, in seconds
+
+  # These things can't be grabbed with telekinesis
+  # Use official Bukkit EntityType names (ZOMBIE, SKELETON, PLAYER, etc)
+  banned-entity-types:
+    - "ENDER_DRAGON"
+    - "WITHER"
+    - "ELDER_GUARDIAN"
+    - "WARDEN"
+    # - "PLAYER" # uncomment to stop grabbing players (but the permission is probably better for this)
+
+  # Settings for checking collisions when moving a held entity
+  collision-check:
+    enabled: true       # if true, it'll check if the held thing is gonna hit a wall
+    checks-amount: 5    # more checks = smoother movement around corners, but uses a bit more server juice
+
+  # Sound and particle effects for Telekinesis
+  effects:
+    hold-aura-particle1: "SPELL_WITCH"
+    hold-aura-particle1-count: 2
+    hold-aura-particle2: "ENCHANTMENT_TABLE"
+    hold-aura-particle2-count: 1
+    grab-sound-caster: "BLOCK_BEACON_POWER_SELECT"  # sound for you when you grab something
+    grab-sound-target: "ENTITY_ILLUSIONER_MIRROR_MOVE" # sound at the target when it gets grabbed
+    grab-particle: "REVERSE_PORTAL"                 # particles when you grab
+    release-particle: "SMOKE_NORMAL"                # particles for a gentle release
+    throw-sound: "ENTITY_PLAYER_ATTACK_STRONG"      # sound when you throw
+    throw-particle: "CRIT"                          # particles when throwing
+    release-sound: "BLOCK_BEACON_DEACTIVATE"        # sound for a gentle release
+    collision-sound: "BLOCK_STONE_HIT"              # sound when the held thing bumps into a block
+    collision-particle: "BLOCK_CRACK"               # particles for collisions, uses the texture of the block hit
+
+#------------------------------------------------------------------------------------#
+# Force Dash Ability
+#------------------------------------------------------------------------------------#
+force-dash:
+  strength-horizontal: 1.9                          # how much sideways oomph for the dash
+  strength-vertical: 0.6                            # a little upward boost when you dash
+  cooldown-seconds: 4                               # dash cooldown in seconds
+  effects:
+    sound: "ENTITY_PHANTOM_FLAP"
+    trail-particle-main: "CLOUD"
+    trail-particle-secondary: "SNOWFLAKE"           # extra particle for a cooler trail
+    initial-burst-particle: "CAMPFIRE_COSY_SMOKE"   # particles right when you start dashing
+    trail-duration-ticks: 10                        # how long the trail particles stick around (20 ticks = 1 sec)
+    trail-particles-per-tick: 3                     # main trail particles spawned each tick
+    trail-offset-behind: 0.5                        # how far behind you the trail particles start
+
+#------------------------------------------------------------------------------------#
+# Targeted Force Push Ability
+#------------------------------------------------------------------------------------#
+targeted-force-push:
+  strength: 2.2                                     # how hard the push is
+  range-divider: 2                                  # push range is max-grab-range / this number (so 20 / 2 = 10 blocks)
+  vertical-boost: 0.35                              # how much upward oomph the push gives
+  cooldown-seconds: 3                               # push cooldown in seconds
+  effects:
+    sound: "ENTITY_WARDEN_SONIC_BOOM"
+    wave-particle-main: "SONIC_BOOM"                # main particle for the push wave look
+    wave-particle-secondary: "CRIT_MAGIC"           # secondary particle for the wave
+    impact-particle: "EXPLOSION_NORMAL"             # particles where the target gets hit by the push
+    fail-sound: "BLOCK_STONE_BUTTON_CLICK_OFF"      # sound if you push and miss, or no target
+
+#------------------------------------------------------------------------------------#
+# AoE (Area of Effect) Force Push Ability
+#------------------------------------------------------------------------------------#
+aoe-force-push:
+  strength: 1.7                                     # how strong the AoE push is
+  radius: 6.0                                       # how big the AoE push area is, in blocks
+  vertical-boost: 0.35                              # upward boost for things hit by AoE
+  cooldown-seconds: 7                               # AoE push cooldown in seconds
+  effects:
+    sound: "ENTITY_WARDEN_ROAR"
+    center-particle: "EXPLOSION_LARGE"              # particles at your feet when you AoE push
+    wave-particle: "SWEEP_ATTACK"                   # particles for the AoE wave expanding out
+    fail-sound: "BLOCK_STONE_BUTTON_CLICK_OFF"      # sound if your AoE push doesn't hit anything

@@ -1,0 +1,86 @@
+# English/Английский
+no-permission:
+  command: "&cYou do not have permission to use this command."
+  release-command: "&cYou do not have permission to use the release command."
+  ability:
+    telekinesis: "&cYou lack the Force. You cannot use telekinesis."
+    telekinesis-player: "&cYou cannot use telekinesis on other players!"
+    dash: "&cYou lack the skill for Force Dash."
+    push-targeted: "&cYou lack the skill for Targeted Force Push."
+    push-aoe: "&cYou lack the skill for AoE Force Push."
+
+crystal:
+  name: "&b&lForce Crystal"
+  received: "&aYou received a {crystalName}&a!" # {crystalName} -> crystal.name
+  lore:
+    atmosphere: "&8&oAn artifact of ancient Force"
+    header-free: "&7--- Free Hands ---"
+    grab: "&bRight-Click: Telekinesis (Grab)"
+    dash: "&bLeft-Click: Force Dash"
+    push-targeted: "&6Shift + Right-Click: Targeted Push"
+    push-aoe: "&6Shift + Left-Click: AoE Push"
+    header-holding: "&7--- Holding Target ---"
+    release-gentle: "&bRight-Click: Gently Release"
+    throw-held: "&6Shift + Right-Click: Throw Target"
+
+telekinesis:
+  grab:
+    success: "&aYou grabbed &e{entityName} &awith the Force!"
+    instruction: "&eUse the Force Crystal to interact."
+    fail-no-target: "&cCould not find a target for the Force Crystal."
+    fail-banned: "&cThis entity is too powerful for the Force Crystal!"
+  release:
+    gentle: "&eYou gently released the entity."
+    throw: "&6You threw the entity!"
+  freed: "&aYou have been freed from the Force grip!"
+  held-player:
+    message: "&c&l{holderName} &cis holding you with the Force!"
+    release-command-tip: "&eType &a/tkrelease &eto try and break free!"
+  collision: "&eThe Force cannot move &6{entityName} ðrough an obstacle!"
+  auto-release:
+    holder: "&eYou held &6{playerName}&e for too long, they broke free!"
+    held: "&aYou automatically broke free due to prolonged hold."
+  death:
+    holder: "&cThe held target ({entityName}) has perished."
+    held-player-freed: "&aYou were freed as you perished while being held."
+  player-quit-released: "&ePlayer &6{playerName} &eleft the game and was released."
+
+dash:
+  success: "&b&oForce Dash!"
+
+push:
+  targeted:
+    success: "&9You pushed &b{targetName}&9!"
+    fail-no-target: "&7No target for Targeted Force Push."
+    fail-banned: "&cThis entity is too strong for the Push!"
+  aoe:
+    success: "&3You used AoE Force Push!"
+    fail-no-targets: "&7No suitable targets nearby for AoE Force Push."
+
+cooldown:
+  message: "&e{abilityName} is recharging! Please wait &6{timeLeft} &esec."
+
+ability:
+  name:
+    dash: "Force Dash"
+    targeted-push: "Targeted Push"
+    aoe-push: "AoE Push"
+
+release-command:
+  success: "&aYou successfully broke free!"
+  holder-notified: "&ePlayer &6{playerName} &ebroke free from your Force grip!"
+  holder-offline: "&aYou were freed (holder left the game)."
+  not-held: "&cYou are not being held by telekinesis."
+
+command:
+  players-only: "&cThis command can only be used by players."
+  crystal-give-instruction-header: "&7--- Force Crystal Guide ---"
+  crystal-give-instruction-hand: "&eHolding the Crystal:"
+  crystal-give-instruction-free-rmb: "&b  Right-Click: Telekinesis (Grab)"
+  crystal-give-instruction-free-lmb: "&b  Left-Click: Force Dash"
+  crystal-give-instruction-free-shift-rmb: "&6  Shift + Right-Click: Targeted Push"
+  crystal-give-instruction-free-shift-lmb: "&6  Shift + Left-Click: AoE Push"
+  crystal-give-instruction-holding-header: "&eWhile holding a target:"
+  crystal-give-instruction-holding-rmb: "&b  Right-Click: Gently Release"
+  crystal-give-instruction-holding-lmb: "&b  Left-Click: (Standard Attack)"
+  crystal-give-instruction-holding-shift-rmb: "&6  Shift + Right-Click: Throw Target"

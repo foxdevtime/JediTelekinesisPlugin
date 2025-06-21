@@ -1,0 +1,86 @@
+# Русский/Russian
+no-permission:
+  command: "&cУ вас нет разрешения на использование этой команды."
+  release-command: "&cУ вас не хватает прав для использования команды освобождения."
+  ability:
+    telekinesis: "&cУ вас нет силы. Вы не сможете использовать телекинез."
+    telekinesis-player: "&cВы не можете использовать телекинез на других игроках!"
+    dash: "&cУ вас нет умений на Рывок Силы."
+    push-targeted: "&cУ вас нет умений на Направленный Толчок Силы."
+    push-aoe: "&cУ вас нет умений на Круговой Толчок Силы."
+
+crystal:
+  name: "&b&lКристалл Силы"
+  received: "&aВы получили {crystalName}&a!" # {crystalName} -> crystal.name
+  lore:
+    atmosphere: "&8&oАртефакт древней Силы"
+    header-free: "&7--- Свободные руки ---"
+    grab: "&bПКМ: Телекинез (Захват)"
+    dash: "&bЛКМ: Рывок Силы"
+    push-targeted: "&6Shift + ПКМ: Направленный Толчок"
+    push-aoe: "&6Shift + ЛКМ: Круговой Толчок"
+    header-holding: "&7--- Удержание цели ---"
+    release-gentle: "&bПКМ: Аккуратно отпустить"
+    throw-held: "&6Shift + ПКМ: Бросить цель"
+
+telekinesis:
+  grab:
+    success: "&aВы захватили &e{entityName} &aСилой!"
+    instruction: "&eИспользуйте Кристалл Силы для взаимодействия."
+    fail-no-target: "&cНе удалось найти цель для Кристалла Силы."
+    fail-banned: "&cЭта сущность слишком могущественна для Кристалла Силы!"
+  release:
+    gentle: "&eВы аккуратно отпустили сущность."
+    throw: "&6Вы бросили удерживаемую сущность!"
+  freed: "&aВы освободились от хватки Силы!"
+  held-player:
+    message: "&c&l{holderName} &cудерживает вас Силой!"
+    release-command-tip: "&eВведите &a/tkrelease &eчтобы попытаться освободиться!"
+  collision: "&eСила не может провести &6{entityName} &eсквозь препятствие!"
+  auto-release:
+    holder: "&eВы слишком долго удерживали &6{playerName}&e, он освободился!"
+    held: "&aВы автоматически освободились из-за длительного удержания."
+  death:
+    holder: "&cУдерживаемая цель ({entityName}) погибла."
+    held-player-freed: "&aВы были освобождены, так как погибли во время удержания."
+  player-quit-released: "&eИгрок &6{playerName} &eвышел из игры и был освобожден."
+
+dash:
+  success: "&b&oРывок Силы!"
+
+push:
+  targeted:
+    success: "&9Вы оттолкнули &b{targetName}&9!"
+    fail-no-target: "&7Нет цели для направленного Толчка Силы."
+    fail-banned: "&cЭта сущность слишком сильна для Толчка!"
+  aoe:
+    success: "&3Вы использовали Круговой Толчок Силы!"
+    fail-no-targets: "&7Рядом нет подходящих целей для кругового Толчка Силы."
+
+cooldown:
+  message: "&e{abilityName} перезаряжается! Подождите &6{timeLeft} &eсек."
+
+ability:
+  name:
+    dash: "Рывок Силы"
+    targeted-push: "Направленный Толчок"
+    aoe-push: "Круговой Толчок"
+
+release-command:
+  success: "&aВы успешно освободились!"
+  holder-notified: "&eИгрок &6{playerName} &eосвободился от вашей хватки Силы!"
+  holder-offline: "&aВы были освобождены (удерживавший вышел из игры)."
+  not-held: "&cВас никто не удерживает телекинезом."
+
+command:
+  players-only: "&cЭту команду могут использовать только игроки."
+  crystal-give-instruction-header: "&7--- Инструкция по Кристаллу Силы ---"
+  crystal-give-instruction-hand: "&eДержа Кристалл в руке:"
+  crystal-give-instruction-free-rmb: "&b  ПКМ: Телекинез (Захват цели)"
+  crystal-give-instruction-free-lmb: "&b  ЛКМ: Рывок Силы"
+  crystal-give-instruction-free-shift-rmb: "&6  Shift + ПКМ: Направленный Толчок"
+  crystal-give-instruction-free-shift-lmb: "&6  Shift + ЛКМ: Круговой Толчок"
+  crystal-give-instruction-holding-header: "&eЕсли удерживаете цель:"
+  crystal-give-instruction-holding-rmb: "&b  ПКМ: Аккуратно отпустить"
+  crystal-give-instruction-holding-lmb: "&b  ЛКМ: (Стандартная атака)"
+  crystal-give-instruction-holding-shift-rmb: "&6  Shift + ПКМ: Бросить цель"

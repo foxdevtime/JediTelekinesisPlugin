@@ -1,0 +1,39 @@
+name: JediTelekinesis
+version: '${version}'
+main: xyz.foxdevtime.jeditelekinesis.JediTelekinesis
+api-version: '1.19'
+authors: [foxdevtime]
+description: Feel the Force!
+commands:
+  telekinesis:
+    description: Gives out a Force Crystal.
+    usage: /<command>
+    aliases: [tk, telekinesis]
+    permission: jeditelekenisis.command.givecrystal
+    permission-message: You do not have permission to use this command.
+  tkrelease:
+    description: Allows you to free yourself from telekinesis if you are being held down.
+    usage: /<command>
+    permission: jeditelekenisis.command.release
+permissions:
+  jeditelekenisis.command.givecrystal:
+    description: Allows you to obtain a Force Crystal via the /tk command.
+    default: op
+  jeditelekenisis.telekinesis:
+    description: Allows you to use telekinesis (grab/hold/throw) with a Force Crystal.
+    default: true
+  jeditelekenisis.telekinesis.player:
+    description: Allows you to use telekinesis on other players.
+    default: op
+  jeditelekenisis.forcedash:
+    description: Allows you to use a Force Dash with a Force Crystal.
+    default: true
+  jeditelekenisis.forcepush.targeted:
+    description: Allows you to use Directional Force Push.
+    default: true
+  jeditelekenisis.forcepush.aoe:
+    description: Allows you to use the AoE Force Push.
+    default: true
+  jeditelekenisis.command.release:
+    description: Allows you to use the /tkrelease command to release.
+    default: true
